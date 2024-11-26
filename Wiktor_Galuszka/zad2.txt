@@ -1,0 +1,4 @@
+SELECT * FROM `waluty`
+SELECT kursy.data, kursy.skup,kursy.sprzedaz,waluty.nazwa,waluty.skrot FROM kursy JOIN waluty ON kursy.id_waluta=waluty.id_waluta WHERE waluty.nazwa="dolar";
+SELECT kursy.data, kursy.skup,kursy.sprzedaz,waluty.nazwa,waluty.skrot FROM kursy JOIN waluty ON kursy.id_waluta=waluty.id_waluta WHERE YEAR(data)=2018 AND MONTH(data)=08 AND DAY(data)=19;
+SELECT MAX(kursy.skup),kursy.data, kursy.skup,kursy.sprzedaz,waluty.nazwa,waluty.skrot FROM kursy JOIN waluty ON kursy.id_waluta=waluty.id_waluta WHERE waluty.skrot="CHF";
