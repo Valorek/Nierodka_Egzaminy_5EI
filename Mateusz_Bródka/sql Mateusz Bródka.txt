@@ -1,0 +1,18 @@
+
+Zapytanie 1: wybierające jedynie pola id, cel, cena z tabeli wycieczki dla wycieczek, które nie są dostępne (pole dostepna)
+
+SELECT wycieczki.id, wycieczki.cel, wycieczki.cel from wycieczki WHERE wycieczki.dostepna = 0; 
+
+
+Zapytanie 2: wybierające jedynie pola nazwaPliku i podpis z tabeli zdjecia sortując je malejąco alfabetycznie według kolumny podpis
+
+SELECT zdjecia.nazwaPliku, zdjecia.podpis from zdjecia ORDER by zdjecia.podpis DESC; 
+
+Zapytanie 3: wykorzystujące relację i wybierające jedynie pola podpis, cena i cel związany ze zdjęciem z tabel zdjecia i wycieczki, dla wycieczek, których cena jest niższa niż 1200 zł
+
+SELECT wycieczki.cel, wycieczki.cena , zdjecia.podpis from wycieczki join zdjecia on wycieczki.id = zdjecia.id WHERE wycieczki.cena > 1200; 
+
+Zapytanie 4: usuwające pole dataWyjazdu z tabeli wycieczki
+
+ALTER TABLE wycieczki DROP COLUMN wycieczki.dataWyjazdu; 
+
