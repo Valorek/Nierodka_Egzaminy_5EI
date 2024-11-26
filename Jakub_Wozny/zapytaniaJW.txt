@@ -1,0 +1,21 @@
+1.
+SELECT przyloty.kierunek, przyloty.czas
+FROM przyloty
+WHERE status_lotu = "";
+
+
+2.
+SELECT przyloty.nr_rejsu, przyloty.kierunek FROM przyloty 
+JOIN samoloty on samoloty.id = przyloty.samoloty_id 
+WHERE samoloty.typ ='Boening 787';
+
+3.
+SELECT nr_rejsu, kierunek
+FROM przyloty
+WHERE nr_rejsu LIKE '%LX%';
+
+
+4.
+UPDATE samoloty
+SET linie = 'SWISS2'
+WHERE linie = 'SWISS';
